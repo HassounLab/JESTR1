@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 import torch
 import pickle
-from models import MolEnc, SpecEncMLP_BIN, SpecEncMLP_SIN, SpecEncTFM, FP_MLP
+from models import MolEnc, SpecEncMLP_BIN
 import matplotlib.pyplot as plt
 import time
 import dgl

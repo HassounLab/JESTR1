@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 import torch
 import pickle
-from models import MolEnc, SpecEncMLP_BIN, SpecEncMLP_SIN, SpecEncTFM, INTER_MLP, INTER_MLP2
+from models import MolEnc, SpecEncMLP_BIN, INTER_MLP2
 import matplotlib.pyplot as plt
 import time
 from train_contr import train_contr
