@@ -1,0 +1,3 @@
+Download molgraph_dict.pkl from the link below and save in this directory
+
+https://zenodo.org/records/11237484?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY4YTcxZjQ1LTUzMDctNGFjNy04MTlhLTc3YjgyMWUwZTgyMSIsImRhdGEiOnt9LCJyYW5kb20iOiJjNWJjZTNmNzJhNDQxZjE4M2NiYTlhNmRjZDI2MDZiMyJ9.8FRxXcZn2OLpza4eCfygdCTMrNIYuFj7-bkfxzQZHC0DwuriQbYhTgrNAJ49L32hiWdkAXfwF52o1s5aJVw01g

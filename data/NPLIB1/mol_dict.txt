@@ -1,0 +1,3 @@
+Download mol_dict.pkl from the link below and save in this directory
+
+https://zenodo.org/records/11237413?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjI2NDE1MjBjLWUwYzUtNGQxMi1iNTAwLWJkMTNhZjAzOTc3ZiIsImRhdGEiOnt9LCJyYW5kb20iOiJjOTc5YjJkNzYwNjk4YzVkNTVhOTM2MjRiMTlkNWMyMSJ9.-BZgl1tcc0UmY5hSN83H5GasKe1KTT14tK2VHGhhXEUFVelrFeXZf6ldaBAIVxJ9cgBJvEgt2aUuJyBQhz8eZw

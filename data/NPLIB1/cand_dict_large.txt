@@ -1,0 +1,3 @@
+Download cand_dict_large.pkl from the link below and save in this directory
+
+https://zenodo.org/records/11237561?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjQ5MzZmMTM1LTEwYjItNGY3OC04MDg2LTFmNzhhYjMyMjY0NCIsImRhdGEiOnt9LCJyYW5kb20iOiI3NzIxZGQ5OWQ2YjAyNDBjZmM3NWFiOTQ4ZjkwOTlkNCJ9.kAJLSsJlNLvt2fsTNEc6V9GmRjUQAjMSYxJR_OfvpttrypIC4jkmZoxirpmL5wZEDLYidYSB5X5D1zkIC5wTaQ
