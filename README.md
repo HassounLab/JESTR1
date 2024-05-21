@@ -49,4 +49,5 @@ The python files are:
 - models.py - all the model classes
 
 To train the model: python train.py
+
 To rank a test set: python cand_rank_canopus.py (for the supplied NPLIB1 dataset)
