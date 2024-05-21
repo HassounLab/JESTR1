@@ -529,7 +529,7 @@ class DatasetBuilder(object):
         """
 
         if self.exp == "canopus":
-            data_dir = '/data/NPLIB1/'
+            data_dir = './data/NPLIB1/'
             self.train_sample_num = None
             self.num_samples = 100
 
