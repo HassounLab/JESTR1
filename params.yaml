@@ -6,6 +6,8 @@ use_sampling: False
 element_list: ['H', 'C',  'O', 'N', 'P', 'S', 'Cl', 'F', 'Br', 'I']
 atom_feature: 'full'
 bond_feature: 'full'
+load_dicts: True
+ignore_test_contr: True
 batch_size_train_contr: 32
 batch_size_train_contr_cand: 32
 batch_size_train_final: 64
