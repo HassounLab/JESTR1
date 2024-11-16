@@ -10,7 +10,14 @@ release. The user can download those data themselves and prepare them as per ins
 For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in
 data/NPLIB1/*.txt files
 
-A description of the data files is:
+To rank candidates for the NPLIB1 dataset, use the python script:
+python cand_rank_canopus.py
+The user can load the supplied model weights as eplained below.
+
+To train the model from scratch, use the python script:
+pythn train.py
+
+A description of the supplied data files is:
 
 - data_dict.pkl - a dictionary of spectra information indexed by spectra id. Each entry is a dictionary for the spectra which contains the m/z amd intensity arrays,
 metadata and molecule SMILES and InchiKey
@@ -25,11 +32,11 @@ metadata and molecule SMILES and InchiKey
 
 - cand_dict.pkl - dictionary keys by target molecule InchiKey. Each entry is a list of candidates for that molecule downloaded from PubChem. This dictionary is for the test set
   
-- cand_dict_train_updated.pkl - same as above for the training set to be used during augmentation. If you are not training for augmentation, you do not need this file and can set the appropriate parameter to False in config file
+- cand_dict_train_updated.pkl - same as above for the training set to be used during regularization. If you are not training for regularization, you do not need this file and can set the appropriate parameter to False in config file
   
 - inchi_to_id_dict_wneg.pkl - dictionary containing both positive and negative (random) spectra id for each test molecule InchiKey
 
-- pretrained*.pt - pretrained model weights for NPLIB1 dataset with augmentation for the three models used in JESTR
+- pretrained*.pt - pretrained model weights for NPLIB1 dataset with regularization for the three models used in JESTR
 
 Config file: This file is called params.yaml. The parameters set in this file are:
 - exp: dataset to be used. If you create your own dataset, you need to update utils.py to load it
@@ -40,7 +47,7 @@ Config file: This file is called params.yaml. The parameters set in this file ar
 - early_stopping* - epoch count for early stopping
 - pretrained* - pretrained model weight path
 
-The python files are:
+A description of the supplied python files is:
 - train_contr.py - script to do contrastive training
 - train.py - script to do final training
 - cand_rank_canopus.py - run ranking for the NPLIB1 dataset. For your own dataset you can modify this file
@@ -48,6 +55,3 @@ The python files are:
 - dataset.py - load and preprocess dataset
 - models.py - all the model classes
 
-To train the model: python train.py
-
-To rank a test set: python cand_rank_canopus.py (for the supplied NPLIB1 dataset)
