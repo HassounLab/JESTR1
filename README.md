@@ -7,9 +7,6 @@ The python packages required for JESTR are given in jestr_requirements.txt. Plea
 We have released the dataset and pretrained weights for the NPLIB1 dataset. The other datasets are under licensing agreements that prohibit thei public
 release. The user can download those data themselves and prepare them as per instructions below.
 
-For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in
-data/NPLIB1/*.txt files
-
 To rank candidates for the NPLIB1 dataset, use the python script:
 python cand_rank_canopus.py
 The user can load the supplied model weights as eplained below.
@@ -37,6 +34,9 @@ metadata and molecule SMILES and InchiKey
 - inchi_to_id_dict_wneg.pkl - dictionary containing both positive and negative (random) spectra id for each test molecule InchiKey
 
 - pretrained*.pt - pretrained model weights for NPLIB1 dataset with regularization for the three models used in JESTR
+
+For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in
+data/NPLIB1/*.txt files
 
 Config file: This file is called params.yaml. The parameters set in this file are:
 - exp: dataset to be used. If you create your own dataset, you need to update utils.py to load it
