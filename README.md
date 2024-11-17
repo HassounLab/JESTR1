@@ -23,9 +23,7 @@ python train.py
 # **Data Preparation**
 A description of the supplied data files is given below. The NPLIB1 dataset is released through these files.
 
-- data_dict.pkl - a dictionary of spectra information indexed by spectra id. Each entry is a dictionary for the spectra which contains the m/z amd intensity arrays,
-metadata and molecule SMILES and InchiKey
-
+- data_dict.pkl - a dictionary of spectra information indexed by spectra id. Each entry is a dictionary for the spectra which contains the m/z amd intensity arrays, metadata and molecule SMILES and InchiKey
 - split.pkl - a dictionary containing the train/valid/test split. These are lists of inchikeys under keys 'train', 'valid', 'test'
 - inchi_to_id_dict.pkl - dictionary indexed by module InChiKeys and containing a list of spectra ids belonging to that molecule
 - mol_dict.pkl - a dictionary containing mapping from molecule InchiKey to rdkit mol strcuture for that molecule
