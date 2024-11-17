@@ -448,6 +448,37 @@ def load_cand_test_data(dataset_builder, params, ik, cand_list, spec, device):
         
     return ret_list
 
+
+
+def load_cand_data_mzi(dataset_builder, params, ik, cand_list, mzi, device):
+    molgraph_dict = dataset_builder.molgraph_dict
+    ret_list = []
+    mol = Chem.MolFromSmiles(ik)
+    if not mol:
+        return ret_list
+
+    if not mol_to_graph(mol, ik, molgraph_dict, params, device):
+        return ret_list
+
+    if ik in cand_list:
+        cand_list.remove(ik)
+
+    iklist = [ik] + cand_list
+
+    fp = [0.0] * 4096 #Hack
+
+    for ikey in iklist:
+        mol = Chem.MolFromSmiles(ikey)
+        if not mol:
+            continue
+
+        if not mol_to_graph(mol, ikey, molgraph_dict, params, device):
+            continue
+
+        ret_list.append((ikey, mzi, fp, 1))
+    
+    return ret_list
+
 def load_vis_test_data(dataset_builder, params, ik_dict, device):
     data_dict = dataset_builder.data_dict
     mol_dict = dataset_builder.mol_dict
