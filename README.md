@@ -1,15 +1,17 @@
-# **JESTR**
-Joint Embedding Space Technique for Ranking Candidate Molecules for the Annotation of Untargeted Metabolomics Data
+# **JESTR: Joint Embedding Space Technique for Ranking Candidate Molecules for the Annotation of Untargeted Metabolomics Data**
 
 This repository contains the python code to train and test the JESTR model. It also contains the NPLIB1 dataset.
 
-# **Environment:**
+# **Environment Setup**
 The python packages required for JESTR are given in jestr_requirements.txt. Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip](https://pip.pypa.io/en/stable/cli/pip_install/).
 All code runs under the [PyTorch framework](https://pytorch.org).
 We have released the dataset and pretrained weights for the NPLIB1 dataset. The other datasets are under licensing agreements that prohibit their public
 release. The user can download those data themselves and prepare them as per instructions below.
 
-# **Ranking and Training**
+# **Usage**
+## **Ranking demo**
+To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb]
+## **Ranking and Training**
 To rank candidates for the NPLIB1 dataset, use the python script:
 python cand_rank_canopus.py
 The user can load the supplied model weights as explained below.
