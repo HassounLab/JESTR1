@@ -13,14 +13,15 @@ release. The user can download those data themselves and prepare them as per ins
 To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1)
 
 ## **Ranking and Training**
-To rank candidates for the NPLIB1 dataset, use the python script:
-python cand_rank_canopus.py
-The user can load the supplied model weights as explained below.
+To rank candidates for the complete NPLIB1 dataset, use the python script: python cand_rank_canopus.py.
 
-To train the model from scratch, use the python script:
-python train.py
+To train the model from scratch, use the python script: python train.py
 
-# **Data Preparation**
+# **License**
+This project is licensed under the MIT license
+
+# **Additional Details**
+## **Data Preparation**
 A description of the supplied data files is given below. The NPLIB1 dataset is released through these files.
 
 - data_dict.pkl - a dictionary of spectra information indexed by spectra id. Each entry is a dictionary for the spectra which contains the m/z amd intensity arrays, metadata and molecule SMILES and InchiKey
@@ -34,7 +35,7 @@ A description of the supplied data files is given below. The NPLIB1 dataset is r
 
 For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in the corresponding data/NPLIB1/*.txt files
 
-# **Configuration file**
+## **Configuration file**
 
 This file is called params.yaml. The parameters set in this file are:
 - exp: dataset to be used. If you create your own dataset, you need to update utils.py to load it
@@ -45,7 +46,7 @@ This file is called params.yaml. The parameters set in this file are:
 - early_stopping* - epoch count for early stopping
 - pretrained* - pretrained model weight path
 
-# **Python scripts**
+## **Python scripts**
 A description of the supplied python files is:
 - train_contr.py - script to do contrastive training
 - train.py - script to do final MLP training
