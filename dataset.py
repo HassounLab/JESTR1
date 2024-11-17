@@ -205,12 +205,22 @@ def load_contrastive_data(dataset_builder, params, device):
     negcnt = 0
     nogrcnt = 0
     dataset_builder.cand_molgraph_dict = {}
+    load_dicts = params['load_dicts']
+    split_dict = dataset_builder.split_dict
     
     for k,v in data_dict.items():
         if v['Precursor'] != '[M+H]+':
             negcnt += 1
             continue
-        
+
+        if load_dicts:
+            inchi = v['inchikey']
+        else:
+            inchi = v['smiles']
+
+        if params['ignore_test_contr']:
+            if inchi in split_dict['test']:
+                continue
         cnt += 1
         if params['debug'] and cnt > 100:
             break
