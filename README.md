@@ -10,7 +10,8 @@ release. The user can download those data themselves and prepare them as per ins
 
 # **Usage**
 ## **Ranking demo**
-To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb]
+To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1]()
+
 ## **Ranking and Training**
 To rank candidates for the NPLIB1 dataset, use the python script:
 python cand_rank_canopus.py
