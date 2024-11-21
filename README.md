@@ -6,7 +6,7 @@ This repository contains the python code to train and test the JESTR model. It a
 The python packages required for JESTR are given in jestr_requirements.txt. Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip](https://pip.pypa.io/en/stable/cli/pip_install/).
 All code runs under the [PyTorch framework](https://pytorch.org).
 We have released the dataset and pretrained weights for the NPLIB1 dataset. The other datasets are under licensing agreements that prohibit their public
-release.
+release. The model was trained and tested on GPU nVidia A100 with CUDA 11.8. The released weights are also for GPU trained models. Please ensure that the environment is set up for GPU.
 
 # **Usage**
 ## **Ranking demo**
