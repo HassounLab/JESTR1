@@ -4,18 +4,20 @@ This repository contains the python code to train and test the JESTR model. It a
 
 # **Environment Setup**
 The python packages required for JESTR are given in jestr_requirements.txt. Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip](https://pip.pypa.io/en/stable/cli/pip_install/).
-All code runs under the [PyTorch framework](https://pytorch.org).
+All code runs under the [PyTorch framework](https://pytorch.org). The code and the models have been tested on the package versions mentioned in the jestr_requirements.txt file, but it is likely the code will work on newer versions of the packages as well.
 We have released the dataset and pretrained weights for the NPLIB1 dataset. The other datasets are under licensing agreements that prohibit their public
-release. The model was trained and tested on GPU nVidia A100 with CUDA 11.8. The released weights are also for GPU trained models. Please ensure that the environment is set up for GPU.
+release. If the user wants to test other datasets, they need to ensure the datasets are available to them under appropriate licenses. The model was trained and tested on GPU nVidia A100 with CUDA 11.8. The released weights are also for GPU trained models. Please ensure that the environment is set up for GPU.
 
 # **Usage**
 ## **Ranking demo**
-To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1)
+To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1). The user can create their own test sets on the lines of the code given in this notebook.
 
 ## **Ranking and Training**
-To rank candidates for the complete NPLIB1 dataset, use the python script: python cand_rank_canopus.py.
+To rank candidates for the complete NPLIB1 dataset, use the command: python cand_rank_canopus.py.
 
 To train the model from scratch, use the python script: python train.py
+
+For ranking candidates for other datasets, the user can prepare the dataset using the appropriate data preparation files explained below
 
 # **License**
 This project is licensed under the MIT license
@@ -41,7 +43,7 @@ This file is called params.yaml. The parameters set in this file are:
 - exp: dataset to be used. If you create your own dataset, you need to update utils.py to load it
 - batch_size* - parameters to set the batch sizes during training and test
 - num_epochs* - set number of epochs for contrastive and MLP training
-- aug_cands - whether to do augmentation or not
+- aug_cands - whether to do regularization or not
 - contr_lr, final_lr - learning rates
 - early_stopping* - epoch count for early stopping
 - pretrained* - pretrained model weight path
