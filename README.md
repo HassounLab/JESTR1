@@ -39,7 +39,7 @@ A description of the supplied data files is given below. The NPLIB1 dataset is r
 - cand_dict_train_updated.pkl - same as above for the training set to be used during regularization. If you are not training with regularization, you do not need this file and can set the appropriate parameter to False in config file
 - inchi_to_id_dict_wneg.pkl - dictionary containing both positive and negative (random) spectra id for each test molecule InchiKey
 
-For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in the corresponding data/NPLIB1/*.txt files
+For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in the corresponding data/NPLIB1/*.txt files.
 The MassSpecGym dataset can be downloaded from the HuggingFace repository [MassSpecGym](https://huggingface.co/datasets/roman-bushuiev/MassSpecGym).
 ## **Configuration file**
 
