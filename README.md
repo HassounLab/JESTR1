@@ -10,7 +10,7 @@ release. If the user wants to test other datasets, they need to ensure the datas
 
 # **Usage**
 ## **Ranking demo**
-To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1). The user can create their own test sets on the lines of the code given in this notebook.
+To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1). Pretrained model weights are available both from the [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1) as well as from the [MAssSpecGym](https://github.com/HassounLab/JESTR1/tree/main/data/MassSpecGym) dataset. The user can create their own test sets on the lines of the code given in this notebook.
 
 ## **Ranking and Training**
 To rank candidates for the complete NPLIB1 dataset, use the command: 
@@ -40,7 +40,7 @@ A description of the supplied data files is given below. The NPLIB1 dataset is r
 - inchi_to_id_dict_wneg.pkl - dictionary containing both positive and negative (random) spectra id for each test molecule InchiKey
 
 For the NPLIB1 dataset, some files are very large to be checked in. These are available on zenodo and the instructions for download are in the corresponding data/NPLIB1/*.txt files
-
+The MassSpecGym dataset can be downloaded from the HuggingFace repository [MassSpecGym](https://huggingface.co/datasets/roman-bushuiev/MassSpecGym).
 ## **Configuration file**
 
 This file is called params.yaml. The parameters set in this file are:
