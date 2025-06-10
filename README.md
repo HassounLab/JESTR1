@@ -10,7 +10,7 @@ release. If the user wants to test other datasets, they need to ensure the datas
 
 # **Usage**
 ## **Ranking demo**
-To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1). Pretrained model weights are available both from the [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1) as well as from the [MAssSpecGym](https://github.com/HassounLab/JESTR1/tree/main/data/MassSpecGym) dataset. The user can create their own test sets on the lines of the code given in this notebook.
+To use the pretrained model and rank a target molecule against its candidates on a given spectrum, please run the code in the notebook [JESTR.ipynb](https://github.com/HassounLab/JESTR1/blob/main/JESTR.ipynb). This notebook uses utility functions from python scripts explained below and data from [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1). Pretrained model weights are available both from the [NPLIB1](https://github.com/HassounLab/JESTR1/tree/main/data/NPLIB1) as well as from the [MassSpecGym](https://github.com/HassounLab/JESTR1/tree/main/data/MassSpecGym) dataset. The user can create their own test sets on the lines of the code given in this notebook.
 
 ## **Ranking and Training**
 To rank candidates for the complete NPLIB1 dataset, use the command: 
