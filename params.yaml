@@ -3,7 +3,7 @@ exp: "canopus"
 fp_path: "ecfp_3_4096"
 load_dicts: True
 use_sampling: False
-element_list: ['H', 'C',  'O', 'N', 'P', 'S', 'Cl', 'F', 'Br', 'I']
+element_list: ['H', 'C',  'O', 'N', 'P', 'S', 'Cl', 'F', 'Br', 'I', 'Si', 'B', 'As', 'Se']
 atom_feature: 'full'
 bond_feature: 'full'
 load_dicts: True
