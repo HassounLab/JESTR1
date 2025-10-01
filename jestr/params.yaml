@@ -1,0 +1,72 @@
+
+# Experiment setup 
+job_key: ''
+run_name: 'JESTR_sample_run'
+run_details: ""
+project_name: ''
+wandb_entity_name: 'mass-spec-ml'
+no_wandb: True
+seed: 0
+debug: False
+checkpoint_pth: ""
+checkpoint_pth_spec_enc: "../pretrained_models/MassSpecGym/pretrained_spec_enc_model_1741546103623_best.pt"
+checkpoint_pth_mol_enc: "../pretrained_models/MassSpecGym/pretrained_mol_enc_model_1741546103623_best.pt"
+
+# Training setup
+max_epochs: 1000 
+accelerator: 'gpu'
+devices: [0]
+log_every_n_steps: 250
+val_check_interval: 1.0
+split_pth: ''
+
+# Data paths
+candidate_file_key: "identifier" # "smiles"
+candidates_pth: ../data/sample/identifier_to_candidates.json
+dataset_pth: "../data/sample/data.tsv" 
+
+# General hyperparameters
+batch_size: 64
+lr: 5.0e-4
+weight_decay: 0
+contr_temp: 0.05
+early_stopping_patience: 300
+loss_strategy: 'static' # static, linear, manual
+num_workers: 50
+log_only_loss_at_stages: []
+df_test_path: ""
+
+############################## Data transforms ##############################
+# - Spectra 
+spectra_view:  SpecBinnerLog 
+max_mz: 1000
+bin_width: 1
+
+# - Molecule
+molecule_view: "MolGraph"
+element_list: ['H', 'C',  'O', 'N', 'P', 'S', 'Cl', 'F', 'Br', 'I', 'Si', 'B', 'As', 'Se']
+atom_feature: 'full'
+bond_feature: 'full'
+
+
+
+############################## Task and model ##############################
+task: 'retrieval'
+spec_enc: MLP_BIN 
+mol_enc: "GNN"
+model:  "contrastive" 
+
+# - Spectra encoder
+final_embedding_dim: 512
+fc_dropout: 0.4
+
+# - Molecule encoder 
+# -- GAT params
+attn_heads: [12,12,12]
+
+# -- GCN params
+gnn_channels: [64,128,256] 
+gnn_type: "gcn"
+num_gnn_layers: 3
+gnn_hidden_dim: 512
+gnn_dropout: 0.3
