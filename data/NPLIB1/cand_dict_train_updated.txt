@@ -1,3 +1,0 @@
-Download cand_dict_train_updated.pkl from the link below and save in this directory
-
-https://zenodo.org/records/11237582?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjlkOTdkZDZiLWQwYzktNGE4Mi1iZmI1LTA1ODY3YTBiYzYyMiIsImRhdGEiOnt9LCJyYW5kb20iOiJmOTI1YTUyZDU1ZWMyMThhMDZjMThlOGJlMjllOTZhMyJ9.wkH71EHEu0LBRg1CsNdQzV48Km9geba2Nhycp4g4XczfL1tV5OlxNhys414iNyoNlTKliGUxRIbP8zBnjWYiOw
