@@ -1,14 +1,14 @@
 # **JESTR: Joint Embedding Space Technique for Ranking Candidate Molecules for the Annotation of Untargeted Metabolomics Data**
 
-V2. This repository contains Python code to train and test the JESTR model and includes the NPLIB1 dataset for demonstration.
+This repository contains Python code to train and test the JESTR model.
 
 ---
 
 ## **Overview**
 JESTR learns a joint embedding of spectra and candidate molecules to rank candidates for untargeted metabolomics annotation. We provide:
-- **Pretrained weights** for the NPLIB1 dataset
+- **Pretrained weights** for the MassSpecGym dataset
 - **Sample data** and a **demo notebook** for quick evaluation
-- **Training scripts** for contrastive pretraining
+- **Training and testing scripts**
 
 JESTR uses [PyTorch](https://pytorch.org). The released weights were trained on NVIDIA A100 (CUDA 11.8). Please ensure your environment supports GPU execution.
 
@@ -16,7 +16,7 @@ JESTR uses [PyTorch](https://pytorch.org). The released weights were trained on 
 
 ## **Quickstart**
 
-### **1) Prepare the environment**
+### **1) Set up the environment**
 - Required packages are listed in `jestr_requirements.txt`.
 - We recommend a fresh Conda environment.
 
@@ -32,7 +32,7 @@ pip install -r jestr_requirements.txt
 If you prefer Conda-only workflows, use the versions pinned in `jestr_requirements.txt` as guidance. See Conda docs: `https://docs.conda.io/en/latest/`.
 
 
-### **2) Get the data**
+### **2) Prepare the data**
 - For a quick demo, use the provided sample under `data/sample/`:
   - `data/sample/data.tsv`: spectra data and metadata
   - `data/sample/identifier_to_candidates.json`: Mapping of spectra identifier to a list of candidate SMILES
@@ -46,7 +46,6 @@ Create or edit `params.yaml`. Key fields:
 - `checkpoint_pth_mol_enc`: molecule encoder checkpoint
 - `candidates_pth`: path to your identifier_to_candidate.json
 - `dataset_pth`: path to your data.tsv
-```
 
 ### **4) Evaluate**
 ```bash
@@ -54,7 +53,7 @@ python test.py
 ```
 
 ## **Training**
-1. Prepare data in the same format as the [MassSpecGym dataset](https://huggingface.co/datasets/roman-bushuiev/MassSpecGym).
+1. Prepare data in the same format as the provided data/sample/data.tsv or the [MassSpecGym data](https://huggingface.co/datasets/roman-bushuiev/MassSpecGym).
 2. Edit `params.yaml`, make sure all checkpoint paths are empty if training from scratch. 
 
 3. Train and evaluate
